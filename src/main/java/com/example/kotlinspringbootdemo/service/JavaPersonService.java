@@ -7,10 +7,10 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 
 @Service
-public class PersonService {
+public class JavaPersonService {
     private ArrayList<Person> people;
 
-    public PersonService() {
+    public JavaPersonService() {
         people = new ArrayList<>();
     }
 

@@ -1,11 +1,11 @@
 package com.example.kotlinspringbootdemo.model;
 
-public class Person {
+public class JavaPerson {
     private String firstName;
     private String lastName;
     private int age;
 
-    public Person(String firstName, String lastName, int age) {
+    public JavaPerson(String firstName, String lastName, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
