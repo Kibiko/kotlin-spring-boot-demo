@@ -28,9 +28,8 @@ public class PersonControllerTests {
     }
 
     @Test
-    public void addPerson() throws Exception {
+    public void addAndGetPeople() throws Exception {
         Person Jane = new Person("Jane", "Doe", 100);
-
         String body = "{\n" +
                 "\t\"firstName\": \"Jane\",\n" +
                 "\t\"lastName\": \"Doe\",\n" +
@@ -42,23 +41,9 @@ public class PersonControllerTests {
                 .andExpect(status().isOk())
                 .andExpect(content().string(Jane.toString()));
 
-
-    }
-
-    @Test
-    public void getPeople() throws Exception {
-        Person Jane = new Person("Jane", "Doe", 100);
-        String body = "{\n" +
-                "\t\"firstName\": \"Jane\",\n" +
-                "\t\"lastName\": \"Doe\",\n" +
-                "\t\"age\": 100\n" +
-                "}";
-        mockMvc.perform(MockMvcRequestBuilders.post("/api/people/add").content(body).contentType(MediaType.APPLICATION_JSON));
-
         String expectedResponse = "[{\"firstName\":\"Jane\",\"lastName\":\"Doe\",\"age\":100}]";
         mockMvc.perform(MockMvcRequestBuilders.get("/api/people"))
                 .andExpect(content().string(expectedResponse));
-
     }
 
 }
