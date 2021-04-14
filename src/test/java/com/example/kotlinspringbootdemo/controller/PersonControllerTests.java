@@ -1,6 +1,6 @@
 package com.example.kotlinspringbootdemo.controller;
 
-import com.example.kotlinspringbootdemo.model.JavaPerson;
+import com.example.kotlinspringbootdemo.model.Person;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -34,7 +34,7 @@ public class PersonControllerTests {
 
     @Test
     public void addPerson() throws Exception {
-        JavaPerson Jane = new JavaPerson("Jane", "Doe", 100);
+        Person Jane = new Person("Jane", "Doe", 100);
 
         String body = "{\n" +
                 "\t\"firstName\": \"Jane\",\n" +

@@ -1,7 +1,7 @@
 package com.example.kotlinspringbootdemo.controller;
 
-import com.example.kotlinspringbootdemo.model.JavaPerson;
-import com.example.kotlinspringbootdemo.service.JavaPersonService;
+import com.example.kotlinspringbootdemo.model.Person;
+import com.example.kotlinspringbootdemo.service.PersonService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -13,7 +13,7 @@ import java.util.ArrayList;
 @RequestMapping("/api")
 public class PersonController {
 
-    JavaPersonService personService = new JavaPersonService();
+    PersonService personService = new PersonService();
 
     @GetMapping("/ping")
     public ResponseEntity<String> ping() {
@@ -22,13 +22,13 @@ public class PersonController {
 
     @GetMapping("/people")
     @ResponseBody
-    public  ResponseEntity<ArrayList<JavaPerson>> getPeople() {
+    public  ResponseEntity<ArrayList<Person>> getPeople() {
         return new ResponseEntity<>(personService.getPeople(), HttpStatus.OK);
     }
 
     @PostMapping("/people/add")
     public ResponseEntity<String> addPerson(
-            @RequestBody JavaPerson person
+            @RequestBody Person person
     ) {
         try {
             return new ResponseEntity<>(personService.addPerson(person).toString(), HttpStatus.OK);

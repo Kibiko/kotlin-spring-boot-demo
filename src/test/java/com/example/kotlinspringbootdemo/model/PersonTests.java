@@ -1,19 +1,17 @@
 package com.example.kotlinspringbootdemo.model;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.util.Assert;
 
 @SpringBootTest
 public class PersonTests {
 
-    private JavaPerson person;
+    private Person person;
     @BeforeEach
     void jane() {
-        person = new JavaPerson("Jane", "Doe", 100);
+        person = new Person("Jane", "Doe", 100);
     }
 
     @Test
