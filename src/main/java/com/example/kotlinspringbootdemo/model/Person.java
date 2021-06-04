@@ -1,11 +1,16 @@
 package com.example.kotlinspringbootdemo.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Person {
     private String firstName;
     private String lastName;
     private int age;
 
-    public Person(String firstName, String lastName, int age) {
+    public Person(
+            @JsonProperty("firstName") String firstName,
+            @JsonProperty("lastName") String lastName,
+            @JsonProperty("age") int age) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
