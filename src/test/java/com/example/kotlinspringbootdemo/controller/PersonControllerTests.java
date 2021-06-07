@@ -28,7 +28,7 @@ public class PersonControllerTests {
     }
 
     @Test
-    public void addAndGetPeople() throws Exception {
+    public void addAndGetPeopleTest() throws Exception {
         Person Jane = new Person("Jane", "Doe", 100);
         String body = "{\n" +
                 "\t\"firstName\": \"Jane\",\n" +
