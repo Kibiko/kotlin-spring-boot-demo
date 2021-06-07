@@ -15,28 +15,28 @@ public class PersonTests {
     }
 
     @Test
-    void testFirstName() {
+    void firstNameTest() {
         Assertions.assertEquals("Jane", person.getFirstName());
         person.setFirstName("Davis");
         Assertions.assertEquals("Davis", person.getFirstName());
     }
 
     @Test
-    void testLastName() {
+    void lastNameTest() {
         Assertions.assertEquals("Doe", person.getLastName());
         person.setLastName("Mohar");
         Assertions.assertEquals("Mohar", person.getLastName());
     }
 
     @Test
-    void testAge() {
+    void ageTest() {
         Assertions.assertEquals(100, person.getAge());
         person.setAge(2);
         Assertions.assertEquals(2, person.getAge());
     }
 
     @Test
-    void testToString() {
+    void toStringTest() {
         Assertions.assertEquals("Jane Doe", person.toString());
     }
 }

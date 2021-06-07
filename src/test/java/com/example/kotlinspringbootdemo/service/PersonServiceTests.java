@@ -20,7 +20,5 @@ public class PersonServiceTests {
         Assertions.assertEquals(jane, personService.addPerson(jane));
         list.add(jane);
         Assertions.assertEquals(list, personService.getPeople());
-
-
     }
 }
