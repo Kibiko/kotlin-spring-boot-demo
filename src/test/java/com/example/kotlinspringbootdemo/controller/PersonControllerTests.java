@@ -19,7 +19,7 @@ public class PersonControllerTests {
     private MockMvc mockMvc;
 
     @Test
-    public void ping() throws Exception {
+    public void pingTest() throws Exception {
 
         mockMvc.perform(
                 MockMvcRequestBuilders.get("/api/ping"))
