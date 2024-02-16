@@ -17,7 +17,8 @@ class PersonController {
     val personService = PersonService()
 
     @GetMapping("/ping")
-    fun ping(): ResponseEntity<String> { return ResponseEntity("pong", HttpStatus.OK)
+    fun ping(): ResponseEntity<String> {
+        return ResponseEntity("pong", HttpStatus.OK)
     }
 
     @GetMapping("/people")
@@ -27,9 +28,7 @@ class PersonController {
     }
 
     @PostMapping("/people/add")
-    fun addPerson(
-        @RequestBody person: Person
-    ): ResponseEntity<String> {
+    fun addPerson(@RequestBody person: Person): ResponseEntity<String> {
         return ResponseEntity(personService.addPerson(person).toString(), HttpStatus.OK)
     }
 }
